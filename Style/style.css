@@ -38,13 +38,12 @@ body {
 
 .sidebar {
     position: fixed;
-    top: 50px;
-    left: 10px;
-    height: 92%;
+    top: 0px;
+    left: 0px;
+    height: 100%;
     width: 250px;
     padding: 10px 14px;
     background: var(--sidebar-color);
-    border-radius: 2%;
     transition: var(--tran-04);
     z-index: 100;
 }
