@@ -239,25 +239,21 @@ body.dark .toggle-switch::before {
 
 .sidebar.close ~ .home {
     left: 88px;
-    width: calc(100% - 88px);
+    width: calc(100% - 80px);
     background: var(--primary-color-light);
 }
 
 .sidebar.close header .toggle .bx-moon,
 .sidebar.close header .toggle .bx-sun {
-    color: var(--sidebar-color); /* Show only the logo when sidebar is collapsed */
+    color: var(--sidebar-color);
 }
 
 .sidebar.close header .toggle:hover {
-    color: var(--primary-color); /* Show color on hover for better UX */
+    color: var(--primary-color); 
 }
 
-@media only screen and (max-width: 768px) {
-    .contact {
-        display: contents;
-    }
-    .contact .toggle {
-        top: 13px;
-        left: 75%;
-    }
+.sidebar.close li .icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

@@ -1,5 +1,5 @@
 #chat-messages {
-    max-height: 300px; /* Adjust as needed */
+    max-height: 300px; 
     overflow-y: auto;
 }
 
