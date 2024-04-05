@@ -1,21 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chat</title>
     <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-firestore.js"></script>
-    <link rel="stylesheet" href="Style/chat.css" />
-</head>
-<body>
-    <div id="sidebar">
+    <link rel="stylesheet" href="Style/style.css">
+  </head>
+  <body>
+    <nav class="sidebar close">
+      <header>
+        <i class="bx bx-chevrons-right toggle"></i>
+      </header>
+
+      <div class="menu-bar">
+        <div class="menu">
+          <ul class="menu-links">
+            <li class="nav-link">
+              <a href="index.html">
+                <i class="bx bxs-briefcase icon"></i>
+                <span class="text nav-text">Home</span>
+              </a>
+            </li>
+            <li class="nav-link">
+              <a href="chat.html">
+                <i class="bx bxs-chat icon"></i>
+                <span class="text nav-text">Chats</span>
+              </a>
+            </li>
+            <li class="nav-link">
+              <a href="#" onclick="toggleOptions()">
+                <i class="bx bx-cloud-upload icon"></i>
+                <span class="text nav-text">Upload Design</span>
+              </a>
+              <ul id="uploadOptions" style="display: none">
+                <li><a href="upload.html">Upload Design</a></li>
+                <li><a href="#">Uploaded Design</a></li>
+              </ul>
+            </li>
+            <li class="nav-link">
+              <a href="profile.html">
+                <i class="bx bx-user icon"></i>
+                <span class="text nav-text">Profile</span>
+              </a>
+            </li>
+            <li class="nav-link">
+              <a href="achivements.html">
+                <i class="bx bxs-help-circle icon"></i>
+                <span class="text nav-text">Help & FAQ</span>
+              </a>
+            </li>
+          </ul>
+          <div class="bottom-content">
+            <li class="mode">
+              <div class="moon-sun">
+                <i class="bx bx-moon icon moon"></i>
+                <i class="bx bx-sun icon sun"></i>
+              </div>
+              <span class="mode-text">Dark Mode</span>
+              <div class="toggle-switch">
+                <span class="switch"></span>
+              </div>
+            </li>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="home">
+      <div id="sidebar">
         <h2>Chat</h2>
         <div id="chat-messages"></div>
-        <input type="text" id="message-input" placeholder="Type your message...">
+        <input
+          type="text"
+          id="message-input"
+          placeholder="Type your message..."
+        />
         <button onclick="sendMessage()">Send</button>
-    </div>
+      </div>
+    </section>
 
     <script src="./script/chat.js"></script>
-</body>
+    <script src="script/script.js"></script>
+  </body>
 </html>
