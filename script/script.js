@@ -30,3 +30,18 @@ document.addEventListener("DOMContentLoaded", () => {
         updateModeText(savedMode === "true");
     }
 });
+  function toggleOptions() {
+    var options = document.getElementById("uploadOptions");
+    options.style.display = options.style.display === "none" ? "block" : "none";
+  }
+
+
+  function redirectToUploadedDesign() {
+    window.location.href = 'uploaded_design.html';
+  }
+
+  // Event listener for 'Uploaded Design' link
+  document.querySelector('#uploadOptions a[href="#"]').addEventListener('click', function(event) {
+    event.preventDefault();
+    redirectToUploadedDesign();
+  });

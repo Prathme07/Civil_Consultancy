@@ -1,46 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
-    font-family: 'Poppins',sans-serif;
+* {
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root{
+:root {
     --body-color: #E4E9F7;
     --sidebar-color: #FFF;
     --primary-color: #695CFE;
     --primary-color-light: #F6F5FF;
     --toggle-color: #DDD;
     --text-color: #707070;
-
+    
     --tran-02: all 0.2s ease;
     --tran-03: all 0.3s ease;
     --tran-04: all 0.4s ease;
     --tran-05: all 0.5s ease;
 }
 
-body.dark{
+body.dark {
     --body-color: #18191A;
     --sidebar-color: #242526;
     --primary-color: #695CFE;
     --primary-color-light: #3A3B3C;
     --toggle-color: #FFF;
     --text-color: #CCC;
-
 }
 
-body{
+body {
     height: 100vh;
     background: var(--body-color);
     transition: var(--tran-04);
 }
 
-.sidebar{
+.sidebar {
     position: fixed;
     top: 50px;
-    left: 10px; 
+    left: 10px;
     height: 92%;
     width: 250px;
     padding: 10px 14px;
@@ -50,14 +49,15 @@ body{
     z-index: 100;
 }
 
-.sidebar.close{
-    width: 88px;  
-}
-.sidebar.close .text{
-    opacity: 0; 
+.sidebar.close {
+    width: 88px;
 }
 
-.sidebar .text{
+.sidebar.close .text {
+    opacity: 0;
+}
+
+.sidebar .text {
     font-size: 16px;
     font-weight: 500;
     color: var(--text-color);
@@ -65,11 +65,12 @@ body{
     opacity: 1;
     white-space: nowrap;
 }
-.sidebar header .toggle{
+
+.sidebar header .toggle {
     position: absolute;
     top: 50%;
     right: -18px;
-    transform: translateY(-50%)rotate(180deg); 
+    transform: translateY(-50%) rotate(180deg);
     height: 25px;
     width: 25px;
     background: var(--primary-color);
@@ -82,24 +83,23 @@ body{
     transition: var(--tran-03);
 }
 
-.sidebar.close header .toggle{
+.sidebar.close header .toggle {
     transform: translateY(-50%);
-
 }
 
-body.dark .sidebar header .toggle{
+body.dark .sidebar header .toggle {
     color: var(--text-color);
-
 }
 
-.header-text .profession{
+.header-text .profession {
     margin-top: -2px;
 }
 
-.header-text .name{
+.header-text .name {
     font-weight: 600;
 }
-.sidebar li{
+
+.sidebar li {
     height: 50px;
     margin-top: 10px;
     list-style: none;
@@ -107,7 +107,7 @@ body.dark .sidebar header .toggle{
     align-items: center;
 }
 
-.sidebar li .icon{
+.sidebar li .icon {
     min-width: 60px;
     font-size: 20px;
     display: flex;
@@ -116,16 +116,16 @@ body.dark .sidebar header .toggle{
 }
 
 .sidebar li .icon,
-.sidebar li .text{
+.sidebar li .text {
     color: var(--text-color);
     transition: var(--tran-02);
 }
 
-.sidebar header{
+.sidebar header {
     position: relative;
 }
 
-.sidebar li a{
+.sidebar li a {
     text-decoration: none;
     height: 100%;
     width: 100%;
@@ -133,41 +133,41 @@ body.dark .sidebar header .toggle{
     align-items: center;
     border-radius: 6px;
     transition: var(--tran-04);
-
 }
 
-.sidebar li a:hover{
-    background: var(--primary-color) ;
+.sidebar li a:hover {
+    background: var(--primary-color);
 }
+
 .sidebar li a:hover .icon,
-.sidebar li a:hover .text{
+.sidebar li a:hover .text {
     color: var(--sidebar-color);
 }
 
 body.dark .sidebar li a:hover .icon,
-body.dark .sidebar li a:hover .text{
+body.dark .sidebar li a:hover .text {
     color: var(--sidebar-color);
 }
 
 body.dark .sidebar li a:hover .icon,
-body.dark .sidebar li a:hover .text{
+body.dark .sidebar li a:hover .text {
     color: var(--text-color);
 }
 
-.sidebar .menu-bar{
+.sidebar .menu-bar {
     height: calc(100% - 50px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.menu-bar .mode{
+.menu-bar .mode {
     position: relative;
     background: var(--primary-color-light);
     border-radius: 6px;
 }
 
-.menu-bar .mode .moon-sun{
+.menu-bar .mode .moon-sun {
     height: 50px;
     width: 60px;
     display: flex;
@@ -179,41 +179,40 @@ body.dark .sidebar li a:hover .text{
     transition: var(--tran-03);
 }
 
-.menu-bar .mode i.sun{
+.menu-bar .mode i.sun {
     opacity: 0;
 }
 
-body.dark .menu-bar .mode i.sun{
+body.dark .menu-bar .mode i.sun {
     opacity: 1;
 }
 
-body.dark .menu-bar .mode i.moon{
+body.dark .menu-bar .mode i.moon {
     opacity: 1;
 }
 
-.menu-bar .mode .toggle-switch{
+.menu-bar .mode .toggle-switch {
     position: absolute;
     right: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 50px;
-    min-width: 60px; 
+    min-width: 60px;
     cursor: pointer;
     border-radius: 6px;
     background: var(--primary-color-light);
 }
 
-.toggle-switch .switch{
+.toggle-switch .switch {
     position: relative;
     height: 22px;
     width: 44px;
     border-radius: 25px;
     background: var(--toggle-color);
-
 }
 
-.switch::before{
+.switch::before {
     content: '';
     position: absolute;
     border-radius: 50%;
@@ -226,93 +225,40 @@ body.dark .menu-bar .mode i.moon{
     transition: var(--tran-03);
 }
 
-
-body.dark .toggle-switch::before{
+body.dark .toggle-switch::before {
     left: 22px;
 }
 
-.home{
+.home {
     position: relative;
     height: 100vh;
-    width: calc(100%-96px);
+    width: calc(100% - 96px);
     background: var(--body-color);
     left: 250px;
     transition: var(--tran-05);
 }
 
-.sidebar.close ~ .home{
+.sidebar.close ~ .home {
     left: 88px;
-    width: calc(100%-88px);
+    width: calc(100% - 88px);
     background: var(--primary-color-light);
 }
 
-.contact-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: var(--primary-color-light);
+.sidebar.close header .toggle .bx-moon,
+.sidebar.close header .toggle .bx-sun {
+    color: var(--sidebar-color); /* Show only the logo when sidebar is collapsed */
 }
 
-.contact-link .nav-text {
-    font-size: 16px;
-    letter-spacing: 1px;
+.sidebar.close header .toggle:hover {
+    color: var(--primary-color); /* Show color on hover for better UX */
 }
 
-.contact {
-    position: fixed;
-    top: 3%;
-    right: 5%;
-    height: 4%;
-    width: 8%;
-    border-radius: 2%;
-    background: var(--primary-color);
-}
-
-.contact .toggle {
-    font-size: 20px;
-    margin-right: 85%;
-    position: absolute;
-    top: 13px;
-    right: 2%;
-    height: 4%;
-    width: 10%;
-    background: var(--primary-color);
-    display: flex;
-    align-items:center;
-    justify-content: center;
-    color: var(--sidebar-color);
-    font-size: 22px;
-}
-
-
-.projects{
-    align-items: center;
-    justify-content: center;
-}
-
-.cards {
-    width: 100%;
-    padding: 100px;
-    margin: 100px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    color: var(--primary-color);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    justify-content: space-between;
-    align-items:center;
-  }
-  
-
-  
-  
-  @media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     .contact {
-      display: contents;
+        display: contents;
     }
-    .contact .toggle{
+    .contact .toggle {
         top: 13px;
         left: 75%;
     }
-  }
-  
+}
