@@ -34,9 +34,3 @@ We welcome contributions from civil engineers, developers, and enthusiasts to en
 
 Let's collaborate to make construction projects safer, more efficient, and accessible to all!
 
-Contact Us
-For any inquiries, feedback, or collaboration opportunities, please contact us at contact@civilconsultancy.com.
-
-Thank you for choosing Civil Consultancy Website!
-
-Disclaimer: This readme file is subject to change and may be updated periodically to reflect the latest features, improvements, and information about the platform.
