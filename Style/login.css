@@ -15,7 +15,7 @@ section {
         /* Blue semi-transparent overlay */
         linear-gradient(rgba(0, 0, 255, 0.5), rgba(0, 0, 255, 0.5)),
         /* Original background photo */
-        url(back_img.png) no-repeat;
+        url(/assets/back_img.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     
